@@ -1,6 +1,5 @@
 package Interfaces;
 
-
 import ThemePark.Visitor;
 
 public interface ISecurity {

@@ -8,11 +8,13 @@ public abstract class Stall {
     private String name;
     private String ownerName;
     private int parkingSpot;
+    private double itemStartingPrice;
 
-    public Stall(String name, String ownerName, int parkingSpot) {
+    public Stall(String name, String ownerName, int parkingSpot, double itemStartingPrice ) {
         this.name = name;
         this.ownerName = ownerName;
         this.parkingSpot = parkingSpot;
+        this.itemStartingPrice = itemStartingPrice;
     }
 
     public String getName(){
@@ -25,5 +27,9 @@ public abstract class Stall {
 
     public int getParkingSpot(){
         return this.parkingSpot;
+    }
+
+    public double getItemStartingPrice(){
+        return this.itemStartingPrice;
     }
 }

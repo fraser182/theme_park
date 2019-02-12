@@ -14,7 +14,7 @@ public class BeerStallTest {
 
     @Before
     public void before(){
-        beerStall = new BeerStall("Bop Beers", "Lindsay McKenzie", 1);
+        beerStall = new BeerStall("Bop Beers", "Lindsay McKenzie", 1, 6.60);
     }
 
     @Test
@@ -28,9 +28,15 @@ public class BeerStallTest {
     }
 
     @Test
+    public void hasItemStartingPrice(){
+        assertEquals(6.60, beerStall.getItemStartingPrice(), 0.01);
+    }
+
+    @Test
     public void hasParkingSpot(){
         assertEquals(1, beerStall.getParkingSpot());
     }
+
 
     @Test
     public void canBuyABeer(){

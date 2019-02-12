@@ -12,7 +12,7 @@ public class RollercoasterTest {
 
     @Before
     public void before(){
-        rollercoaster = new Rollercoaster("Raptor");
+        rollercoaster = new Rollercoaster("Raptor", 8.40);
     }
 
     @Test
@@ -37,5 +37,22 @@ public class RollercoasterTest {
         visitor = new Visitor("John McYoung",12, 167, 5.50);
         assertEquals(false, rollercoaster.isAllowedTo(visitor));
     }
-    
+
+    @Test
+    public void canShowDefaultPrice(){
+        assertEquals(8.40,  rollercoaster.defaultPrice(), 0.01);
+    }
+
+
+    @Test
+    public void canShowDefaultPriceForVisitorUnder200cm(){
+        visitor = new Visitor("John McYoung",27, 167, 5.50);
+        assertEquals(8.40, rollercoaster.priceFor(visitor), 0.01);
+    }
+
+    @Test
+    public void canShowDoubleDefaultPriceForVisitorOver200cm(){
+        visitor = new Visitor("Mike Wright",30, 201, 15.50);
+        assertEquals(16.80, rollercoaster.priceFor(visitor), 0.001);
+    }
 }

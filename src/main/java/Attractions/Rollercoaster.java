@@ -1,12 +1,16 @@
 package Attractions;
 
 import Interfaces.ISecurity;
+import Interfaces.ITicketed;
 import ThemePark.Visitor;
 
-public class Rollercoaster extends Attraction implements ISecurity {
+public class Rollercoaster extends Attraction implements ISecurity, ITicketed {
 
-    public Rollercoaster(String name){
+    private double price;
+
+    public Rollercoaster(String name, double price){
         super(name);
+        this.price = price;
     }
 
 
@@ -15,4 +19,18 @@ public class Rollercoaster extends Attraction implements ISecurity {
             return true;
         } return false;
     }
+
+
+    public double defaultPrice(){
+        return this.price;
+    }
+
+    public double priceFor(Visitor visitor){
+     if (visitor.getHeight() > 200){
+         return this.price*2;
+     }
+     return defaultPrice();
+    }
+
+
 }

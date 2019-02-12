@@ -32,14 +32,14 @@ public class ThemeParkTest {
 
         visitor = new Visitor("Lady Ross", 15, 146, 12.00);
 
-        rollercoaster = new Rollercoaster("Super Dooper Looper");
-        dodgems = new Dodgems("Rockin' Dodgems");
+        rollercoaster = new Rollercoaster("Super Dooper Looper", 8.40);
+        dodgems = new Dodgems("Rockin' Dodgems", 4.50);
         park = new Park("Wonderland");
         playGround = new Playground("Crazy Fun House");
 
-        beerStall = new BeerStall("Bop Beers", "Lindsay McKenzie", 1);
-        candyFlossStall = new CandyFlossStall("Julia's Floss", "Julia McKenzie", 2);
-        iceCreamStall = new IceCreamStall("Belle's Ice-Cream", "Belle Ross", 3);
+        beerStall = new BeerStall("Bop Beers", "Lindsay McKenzie", 1, 6.60);
+        candyFlossStall = new CandyFlossStall("Julia's Floss", "Julia McKenzie", 2, 4.20);
+        iceCreamStall = new IceCreamStall("Belle's Ice-Cream", "Belle Ross", 3, 2.80);
 
 
     }

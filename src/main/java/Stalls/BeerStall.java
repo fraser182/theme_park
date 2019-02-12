@@ -5,8 +5,8 @@ import ThemePark.Visitor;
 
 public class BeerStall extends Stall implements ISecurity {
 
-    public BeerStall(String name, String ownerName, int parkingSpot) {
-        super(name, ownerName, parkingSpot);
+    public BeerStall(String name, String ownerName, int parkingSpot, double itemStartingPrice) {
+        super(name, ownerName, parkingSpot, itemStartingPrice);
     }
 
     public  boolean isAllowedTo(Visitor visitor) {
