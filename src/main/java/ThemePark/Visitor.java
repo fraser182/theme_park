@@ -1,6 +1,8 @@
+package ThemePark;
+
 public class Visitor {
 
-//    Visitor has age, height, money
+    //    Visitor has age, height, money
     private String name;
     private int age;
     private int height;

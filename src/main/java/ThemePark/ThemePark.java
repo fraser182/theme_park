@@ -1,6 +1,6 @@
+package ThemePark;
+
 import Attractions.Attraction;
-import Attractions.Rollercoaster;
-import Stalls.BeerStall;
 import Stalls.Stall;
 
 import java.util.ArrayList;
@@ -37,10 +37,9 @@ public class ThemePark {
     }
 
     public String visitAttraction(Visitor visitor, Attraction attraction) {
-        return  visitor.getName() + ", aged " + visitor.getAge() + ", at a height of " + visitor.getHeight() +
+        return visitor.getName() + ", aged " + visitor.getAge() + ", at a height of " + visitor.getHeight() +
                 "cm, rode the " + attraction.getName() + " Roller Coaster.";
     }
-
 
 
 }

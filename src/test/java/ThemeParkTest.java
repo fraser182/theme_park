@@ -2,6 +2,8 @@ import Attractions.*;
 import Stalls.BeerStall;
 import Stalls.CandyFlossStall;
 import Stalls.IceCreamStall;
+import ThemePark.ThemePark;
+import ThemePark.Visitor;
 import org.junit.Before;
 import org.junit.Test;
 
