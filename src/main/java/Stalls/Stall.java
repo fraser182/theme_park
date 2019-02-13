@@ -40,4 +40,8 @@ public abstract class Stall implements IReviewed {
     public int getRating(){
         return this.rating;
     }
+
+    public void newRating(int rating){
+        this.rating = rating;
+    }
 }

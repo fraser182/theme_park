@@ -46,4 +46,12 @@ public class DodgemsTest {
     public void canGetName(){
         assertEquals("Rockin' Dodgems", dodgems.getName());
     }
+
+
+    @Test
+    public void newRating(){
+        assertEquals(0, dodgems.getRating());
+        dodgems.newRating(8);
+        assertEquals(8, dodgems.getRating());
+    }
 }

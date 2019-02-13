@@ -41,34 +41,37 @@ public class ThemeParkTest {
         candyFlossStall = new CandyFlossStall("Julia's Floss", "Julia McKenzie", 2, 4.20);
         iceCreamStall = new IceCreamStall("Belle's Ice-Cream", "Belle Ross", 3, 2.80);
 
+        themePark.addAttraction(rollercoaster);
+        themePark.addAttraction(dodgems);
+        themePark.addAttraction(park);
+        themePark.addAttraction(playGround);
 
+        themePark.addStall(beerStall);
+        themePark.addStall(candyFlossStall);
+        themePark.addStall(iceCreamStall);
+
+        rollercoaster.newRating(10);
+        dodgems.newRating(8);
+        park.newRating(7);
+        playGround.newRating(7);
+
+        beerStall.newRating(9);
+        candyFlossStall.newRating(6);
+        iceCreamStall.newRating(8);
     }
 
-
     @Test
-    public void canCheckAttractionsArrayListIsEmpty(){
-        assertEquals(0, themePark.countAttractions());
+    public void hasName(){
+        assertEquals("Wonderland", themePark.getName());
     }
 
     @Test
-    public void canCheckStallsArrayListIsEmpty(){
-        assertEquals(0, themePark.countStalls());
-    }
-
-    @Test
-    public void canAddAttractions(){
-       themePark.addAttraction(rollercoaster);
-       themePark.addAttraction(dodgems);
-       themePark.addAttraction(park);
-       themePark.addAttraction(playGround);
+    public void canCountAttractions(){
        assertEquals(4, themePark.countAttractions());
     }
 
     @Test
-    public void canAddStalls(){
-        themePark.addStall(beerStall);
-        themePark.addStall(candyFlossStall);
-        themePark.addStall(iceCreamStall);
+    public void canCountStalls(){
         assertEquals(3, themePark.countStalls());
     }
 
@@ -77,8 +80,20 @@ public class ThemeParkTest {
         String result = themePark.visitAttraction(visitor, rollercoaster);
         assertEquals("Lady Ross, aged 15, at a height of 146cm, rode the Super Dooper Looper Roller Coaster.", result);
     }
-    
+
+    @Test
+    public void canGetAllVisitorsAllowedEntry(){
+
+    }
 
 
+    @Test
+    public void canReturnAllReviews(){
+        assertEquals(7, themePark.getAllReviewed().size());
+    }
 
+    @Test
+    public void canViewAllReviews() {
+        assertEquals("Super Dooper Looper: 10 , Rockin' Dodgems: 8 , Wonderland: 7 , Crazy Fun House: 7 , Bop Beers: 9 , Julia's Floss: 6 , Belle's Ice-Cream: 8 , ", themePark.viewAllReviews());
+    }
 }

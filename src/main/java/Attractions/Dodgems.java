@@ -24,4 +24,6 @@ public class Dodgems extends Attraction implements ITicketed {
         return this.price /2;
     } return this.price;
    }
+
+
 }
