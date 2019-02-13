@@ -34,5 +34,8 @@ public class IceCreamStallTest {
         assertEquals(2.80, iceCreamStall.getItemStartingPrice(), 0.01);
     }
 
-
+    @Test
+    public void canGetInitialRating(){
+        assertEquals(0,  iceCreamStall.getRating());
+    }
 }

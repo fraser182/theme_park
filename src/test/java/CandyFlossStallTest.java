@@ -32,4 +32,9 @@ public class CandyFlossStallTest {
     public void hasItemStartingPrice(){
         assertEquals(4.20, candyFlossStall.getItemStartingPrice(), 0.01);
     }
+
+    @Test
+    public void canGetInitialRating(){
+        assertEquals(0,  candyFlossStall.getRating());
+    }
 }

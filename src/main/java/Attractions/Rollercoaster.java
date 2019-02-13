@@ -7,10 +7,12 @@ import ThemePark.Visitor;
 public class Rollercoaster extends Attraction implements ISecurity, ITicketed {
 
     private double price;
+    private int rating;
 
     public Rollercoaster(String name, double price){
         super(name);
         this.price = price;
+        this.rating = 0;
     }
 
 

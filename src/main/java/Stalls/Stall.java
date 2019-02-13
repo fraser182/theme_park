@@ -1,6 +1,8 @@
 package Stalls;
 
-public abstract class Stall {
+import Interfaces.IReviewed;
+
+public abstract class Stall implements IReviewed {
 
 //    Using a Stall abstract class (which has a name,
 //    ownerName and parkingSpot)
@@ -9,12 +11,14 @@ public abstract class Stall {
     private String ownerName;
     private int parkingSpot;
     private double itemStartingPrice;
+    private int rating;
 
     public Stall(String name, String ownerName, int parkingSpot, double itemStartingPrice ) {
         this.name = name;
         this.ownerName = ownerName;
         this.parkingSpot = parkingSpot;
         this.itemStartingPrice = itemStartingPrice;
+        this.rating = 0;
     }
 
     public String getName(){
@@ -31,5 +35,9 @@ public abstract class Stall {
 
     public double getItemStartingPrice(){
         return this.itemStartingPrice;
+    }
+
+    public int getRating(){
+        return this.rating;
     }
 }

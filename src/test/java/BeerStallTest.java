@@ -49,6 +49,11 @@ public class BeerStallTest {
         visitor = new Visitor("Craig Smith",17, 188, 21.00);
         assertEquals(false, beerStall.isAllowedTo(visitor));
     }
+
+    @Test
+    public void canGetInitialRating(){
+        assertEquals(0,  beerStall.getRating());
+    }
 }
 
 

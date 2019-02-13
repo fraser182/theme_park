@@ -43,6 +43,10 @@ public class RollercoasterTest {
         assertEquals(8.40,  rollercoaster.defaultPrice(), 0.01);
     }
 
+    @Test
+    public void canGetInitialRating(){
+        assertEquals(0,  rollercoaster.getRating());
+    }
 
     @Test
     public void canShowDefaultPriceForVisitorUnder200cm(){

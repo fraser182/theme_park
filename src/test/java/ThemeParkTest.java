@@ -77,6 +77,7 @@ public class ThemeParkTest {
         String result = themePark.visitAttraction(visitor, rollercoaster);
         assertEquals("Lady Ross, aged 15, at a height of 146cm, rode the Super Dooper Looper Roller Coaster.", result);
     }
+    
 
 
 

@@ -37,4 +37,13 @@ public class DodgemsTest {
         assertEquals(4.50,  dodgems.priceFor(visitor), 0.01);
     }
 
+    @Test
+    public void canGetInitialRating(){
+        assertEquals(0,  dodgems.getRating());
+    }
+
+    @Test
+    public void canGetName(){
+        assertEquals("Rockin' Dodgems", dodgems.getName());
+    }
 }
