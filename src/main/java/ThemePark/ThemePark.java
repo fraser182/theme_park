@@ -11,14 +11,14 @@ public class ThemePark {
 
     private ArrayList<Stall> stalls;
     private ArrayList<Attraction> attractions;
+//    private ArrayList<IReviewed> iReviews;
+
     private String name;
-    private ArrayList<ITicketed> parkEntry;
 
     public ThemePark(String name) {
         this.name = name;
         this.stalls = new ArrayList<Stall>();
         this.attractions = new ArrayList<Attraction>();
-        this.parkEntry = new ArrayList<ITicketed>();
 
     }
 
@@ -50,7 +50,7 @@ public class ThemePark {
                 "cm, rode the " + attraction.getName() + " Roller Coaster.";
     }
 
-//    public ArrayList<ITicketed> getAllAllowedFor(Visitor vistor){
+//    public ArrayList<ITicketed> getAllAllowedFor(Visitor visitor){
 //        ArrayList<ITicketed> allVisitorsAllowedEntry = new ArrayList<ITicketed>();
 //        for ()
 //
@@ -75,7 +75,8 @@ public class ThemePark {
         for (Stall stall : this.stalls) {
             allParkReviews += stall.getName() + ": " + stall.getRating() + " , ";
         }
-        return allParkReviews;
+        String withoutLastCommaAllParkReviews = allParkReviews.substring( 0, allParkReviews.length( ) - " , ".length( ) );
+        return withoutLastCommaAllParkReviews;
     }
 
 }

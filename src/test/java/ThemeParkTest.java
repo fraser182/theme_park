@@ -94,6 +94,6 @@ public class ThemeParkTest {
 
     @Test
     public void canViewAllReviews() {
-        assertEquals("Super Dooper Looper: 10 , Rockin' Dodgems: 8 , Wonderland: 7 , Crazy Fun House: 7 , Bop Beers: 9 , Julia's Floss: 6 , Belle's Ice-Cream: 8 , ", themePark.viewAllReviews());
+        assertEquals("Super Dooper Looper: 10 , Rockin' Dodgems: 8 , Wonderland: 7 , Crazy Fun House: 7 , Bop Beers: 9 , Julia's Floss: 6 , Belle's Ice-Cream: 8", themePark.viewAllReviews());
     }
 }
