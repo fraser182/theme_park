@@ -50,12 +50,6 @@ public class ThemePark {
                 "cm, rode the " + attraction.getName() + " Roller Coaster.";
     }
 
-//    public ArrayList<ITicketed> getAllAllowedFor(Visitor visitor){
-//        ArrayList<ITicketed> allVisitorsAllowedEntry = new ArrayList<ITicketed>();
-//        for ()
-//
-//    }
-
     public ArrayList<IReviewed> getAllReviewed() {
         ArrayList<IReviewed> allParkReviewed = new ArrayList<IReviewed>();
         for (Attraction attraction : this.attractions) {
